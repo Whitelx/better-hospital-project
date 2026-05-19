@@ -41,7 +41,7 @@ def add_patient(username):
     symptoms = input("Symptoms: ").strip()
 
     if name == "" or age == "" or gender == "" or symptoms == "":
-        print("All field are required.")
+        print("All fields are required.")
         return
     
     patients = load_json(PATIENTS_FILE)
@@ -49,11 +49,12 @@ def add_patient(username):
     new_id =len(patients) + 1
 
     new_patient = {
-        "id": new_id,
-        "added_by": username,
-        "age": age,
-        "gender": gender,
-        "symptoms": symptoms
+    "id": new_id,
+    "added_by": username,
+    "name": name,
+    "age": age,
+    "gender": gender,
+    "symptoms": symptoms
     }
 
     patients.append(new_patient)
@@ -93,7 +94,7 @@ def search_patient():
     found = False
 
     for patient in patients:
-        if search_name in patient["name"].lower():
+        if search_name in patient.get("name", "").lower():
             print("------------------------------")
             print(f"ID: {patient['id']}")
             print(f"Name: {patient['name']}")
