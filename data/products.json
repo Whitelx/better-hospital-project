@@ -1,19 +1,19 @@
 [
     {
         "id": 1,
-        "name": "Python Courses",
+        "name": "Comprehensive examination",
         "price": 49.99,
         "stock": 10
     },
     {
         "id": 2,
-        "name": "AI Notes",
+        "name": "Vaccination needle",
         "price": 19.99,
         "stock": 9
     },
     {
         "id": 3,
-        "name": "Programming Book",
+        "name": "X-ray imaging",
         "price": 29.99,
         "stock": 7
     }
